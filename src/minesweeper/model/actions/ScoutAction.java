@@ -12,14 +12,39 @@ public class ScoutAction implements MineAction {
 	@Override
 	public void doStuff(Map<Position, GeneralCell> cells, Position pos, Field field) {
 		Counter count = new Counter();
-		cells.get(pos.getLeft()).countIfBomb(count);
-		cells.get(pos.getTopLeft()).countIfBomb(count);
-		cells.get(pos.getTopLeft()).countIfBomb(count);
-		cells.get(pos.getTopRight()).countIfBomb(count);
-		cells.get(pos.getRight()).countIfBomb(count);
-		cells.get(pos.getBottomRight()).countIfBomb(count);
-		cells.get(pos.getBottom()).countIfBomb(count);
-		cells.get(pos.getBottomLeft()).countIfBomb(count);
+		GeneralCell tempCell = cells.get(pos.getLeft());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
+
+		tempCell = cells.get(pos.getTopLeft());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
+		tempCell = cells.get(pos.getTop());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
+		tempCell = cells.get(pos.getTopRight());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
+		tempCell = cells.get(pos.getRight());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
+		tempCell = cells.get(pos.getBottomRight());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
+		tempCell = cells.get(pos.getBottom());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
+		tempCell = cells.get(pos.getBottomLeft());
+		if (tempCell != null) {
+			tempCell.countIfBomb(count);
+		}
 		field.setSymbol(pos, count.counterSymbol());
 	}
 

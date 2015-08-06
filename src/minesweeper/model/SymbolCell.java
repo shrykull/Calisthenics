@@ -24,3 +24,5 @@ public class SymbolCell extends GeneralCell {
 		//fuck it
 	}
 }
+//Fügt sich zusammen (Angst und verwirrung?)
+//überrascht und gelernt zusammen: man kommt net so weit weiter als 2 methodenaufrufe denken (oft verzettelt)

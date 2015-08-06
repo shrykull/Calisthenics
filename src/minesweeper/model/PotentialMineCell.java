@@ -29,7 +29,7 @@ public class PotentialMineCell extends GeneralCell {
 	}
 	
 	private MineAction randomAction() {
-		int chance = 10;
+		int chance = 50;
 		if (Math.random() * 100 < chance) {
 			return new ExplodeAction();
 		}
