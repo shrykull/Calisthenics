@@ -10,6 +10,6 @@ public class Field {
 	}
 
 	public void exploreCell(Position pos) {
-		
+		cells.get(pos);
 	}
 }
