@@ -1,8 +1,10 @@
 package minesweeper.io;
 
+import minesweeper.model.Position;
+
 public class InputParser {
  
-	public int[] parse(String input){
+	public Position parse(String input){
 	 return null;
  }
 }
