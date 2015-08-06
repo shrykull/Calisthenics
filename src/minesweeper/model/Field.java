@@ -1,11 +1,15 @@
 package minesweeper.model;
 
+import java.util.Map;
+
 public class Field {
-	Cell[][] cells;
+	Map<Position, Cell> cells;
 
 	public Field() {
-
+		
 	}
-	
-	
+
+	public void exploreCell(Position pos) {
+		
+	}
 }
