@@ -6,7 +6,7 @@ public class Counter {
 		count++;
 	}
 	
-	public String getCounterSymbol(){
+	public String counterSymbol(){
 		return String.valueOf(count);
 	}
 }

@@ -2,14 +2,15 @@ package minesweeper.model.actions;
 
 import java.util.Map;
 
-import minesweeper.model.Cell;
 import minesweeper.model.Counter;
+import minesweeper.model.Field;
+import minesweeper.model.GeneralCell;
 import minesweeper.model.Position;
 
 public class ScoutAction implements MineAction {
 
 	@Override
-	public void doStuff(Map<Position, Cell> cells, Position pos) {
+	public void doStuff(Map<Position, GeneralCell> cells, Position pos, Field field) {
 		Counter count = new Counter();
 		cells.get(pos.getLeft()).countIfBomb(count);
 		cells.get(pos.getTopLeft()).countIfBomb(count);
@@ -19,9 +20,7 @@ public class ScoutAction implements MineAction {
 		cells.get(pos.getBottomRight()).countIfBomb(count);
 		cells.get(pos.getBottom()).countIfBomb(count);
 		cells.get(pos.getBottomLeft()).countIfBomb(count);
-		count.getCounterSymbol();
-
-
+		field.setSymbol(pos, count.counterSymbol());
 	}
 
 	@Override

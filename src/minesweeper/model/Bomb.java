@@ -1,5 +1,5 @@
 package minesweeper.model;
 
-public class Bomb extends Cell{
+public class Bomb extends PotentialMineCell{
 
 }
