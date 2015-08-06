@@ -2,13 +2,17 @@ package minesweeper.model;
 
 import java.util.Map;
 
-import minesweeper.model.actions.ExplodeAction;
-
 public class Field {
 	Map<Position, GeneralCell> cells;
 
 	public Field() {
-		
+		int fieldsize = 3;
+		int qfieldsize = fieldsize * fieldsize; //quadratisch machen
+		for (int i = 0; i < qfieldsize;i++) {
+			int x = (int)Math.floor(i / fieldsize);
+			int y = i % fieldsize;
+			cells.put(new Position(x, y), new PotentialMineCell());
+		}
 	}
 
 	public void exploreCell(Position pos) {
