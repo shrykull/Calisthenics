@@ -5,6 +5,11 @@ import java.util.Scanner;
 import minesweeper.model.Position;
 
 public class InputParser {
+	Scanner scan;
+	public InputParser() {
+		scan = new Scanner(System.in);
+	}
+	
 
 	public Position parse(String input) {
 
@@ -21,7 +26,7 @@ public class InputParser {
 	}
 
 	public Position read() {
-		Scanner scan = new Scanner(System.in);
+		
 
 		return parse(scan.next());
 	}
