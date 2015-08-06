@@ -10,12 +10,10 @@ public class PotentialMineCell extends GeneralCell {
 	
 	MineAction action;
 	
-	
 	public PotentialMineCell() {
 		super();
 		this.action = randomAction();
 	}
-
 
 	public void activate(Map<Position, GeneralCell> cells, Position pos, Field field) {
 		action.doStuff(cells, pos, field);
@@ -24,7 +22,6 @@ public class PotentialMineCell extends GeneralCell {
 	public void countIfBomb(Counter count){
 		action.countUp(count);
 	}
-
 
 	@Override
 	public void draw(StringBuilder builder) {

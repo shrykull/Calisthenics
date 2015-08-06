@@ -4,6 +4,11 @@ import minesweeper.model.Field;
 
 public class Main {
 	public static void main(String[] args) {
-		Field field = new Field();
+		int fieldAxisLength = 3;
+		
+		Viewer viewer = new Viewer(fieldAxisLength);
+		
+		Field field = new Field(fieldAxisLength);
+		field.play(viewer);
 	}
 }
