@@ -2,6 +2,8 @@ package minesweeper.model;
 
 import java.util.Map;
 
+import minesweeper.io.InputParser;
+
 public class Field {
 	Map<Position, GeneralCell> cells;
 
@@ -21,5 +23,13 @@ public class Field {
 	
 	public void setSymbol(Position pos, String symbol) {
 		cells.put(pos, new SymbolCell(symbol));
+	}
+	
+	public void play(){
+		InputParser pars = new InputParser();
+		
+		while(true){
+			this.exploreCell(pars.read());
+		}
 	}
 }
