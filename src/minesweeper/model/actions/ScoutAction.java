@@ -44,7 +44,7 @@ public class ScoutAction implements MineAction {
 		tempCell = cells.get(pos.getBottomLeft());
 		if (tempCell != null) {
 			tempCell.countIfBomb(count);
-		}
+		}//TODO: rekursiv weiterlaufen lassen?
 		field.setSymbol(pos, count.counterSymbol());
 	}
 

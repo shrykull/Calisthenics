@@ -44,7 +44,9 @@ public class Field {
 
 	public void print(Viewer viewer) {
 		StringBuilder builder = new StringBuilder();
+		
 		for (GeneralCell cell : cells.values()) {
+			//TODO: Geordnete Ausgabe
 			cell.draw(builder);
 		}
 		viewer.printField(builder);
