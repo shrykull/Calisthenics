@@ -51,7 +51,6 @@ public class ScoutAction implements MineAction {
 	@Override
 	public void countUp(Counter count) {
 		// fuck it
-
 	}
 
 }

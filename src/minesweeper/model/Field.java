@@ -44,10 +44,9 @@ public class Field {
 
 	public void print(Viewer viewer) {
 		StringBuilder builder = new StringBuilder();
-		
-		for (GeneralCell cell : cells.values()) {
-			//TODO: Geordnete Ausgabe
-			cell.draw(builder);
+		int fieldsize = (int)Math.sqrt(cells.values().size()); 
+		for (int i = 0; i < cells.values().size(); ++i) {
+			cells.get(new Position(i % fieldsize, (int)Math.floor(i / fieldsize))).draw(builder);
 		}
 		viewer.printField(builder);
 	}
