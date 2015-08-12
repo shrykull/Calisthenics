@@ -40,6 +40,7 @@ public class Field {
 
 			this.exploreCell(pars.read());
 		}
+		this.print(viewer);
 		System.out.println("You Won");
 	}
 	
@@ -48,7 +49,8 @@ public class Field {
 			if (cell instanceof PotentialMineCell) {
 				Counter counter = new Counter();
 				cell.countIfBomb(counter);
-				return (!counter.counterSymbol().equals("0")); //TODO: trollolol. 
+				if (counter.counterSymbol().equals("0"))
+					return false; //TODO: stop violating the indentation rule
 			}
 		}
 		return true;
