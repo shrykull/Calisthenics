@@ -7,6 +7,7 @@ import minesweeper.model.Field;
 import minesweeper.model.GeneralCell;
 import minesweeper.model.Position;
 
+//TODO: shorten this class to fit 50 lines max
 public class ScoutAction implements MineAction {
 
 	@Override

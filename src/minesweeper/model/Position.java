@@ -1,5 +1,6 @@
 package minesweeper.model;
 
+//TODO: shorten this class to fit 50 lines max
 public class Position {
 	private int x, y;
 

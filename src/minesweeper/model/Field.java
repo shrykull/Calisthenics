@@ -6,6 +6,7 @@ import java.util.Map;
 import minesweeper.Viewer;
 import minesweeper.io.InputParser;
 
+//TODO: shorten this class to fit 50 lines max
 public class Field {
 	Map<Position, GeneralCell> cells;
 
