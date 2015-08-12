@@ -46,7 +46,10 @@ public class Field {
 	public boolean fieldEnded() {
 		for (GeneralCell cell : cells.values()) {
 			if (cell instanceof PotentialMineCell) {
-				return false;
+				Counter counter = new Counter();
+				cell.countIfBomb(counter);
+				if (counter.counterSymbol().equals("0"))
+					return false; //TODO: stop violating the indentation rule
 			}
 		}
 		return true;
