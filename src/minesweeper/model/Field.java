@@ -34,12 +34,22 @@ public class Field {
 	public void play(Viewer viewer) {
 		InputParser pars = new InputParser();
 
-		while (true) {
+		while (!fieldEnded()) {
 			this.print(viewer);
 			System.out.println("DO YOUR WORST");
 
 			this.exploreCell(pars.read());
 		}
+		System.out.println("You Won");
+	}
+	
+	public boolean fieldEnded() {
+		for (GeneralCell cell : cells.values()) {
+			if (cell instanceof PotentialMineCell) {
+				return false;
+			}
+		}
+		return true;
 	}
 
 	public void print(Viewer viewer) {
