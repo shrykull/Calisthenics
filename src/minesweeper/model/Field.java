@@ -48,8 +48,7 @@ public class Field {
 			if (cell instanceof PotentialMineCell) {
 				Counter counter = new Counter();
 				cell.countIfBomb(counter);
-				if (counter.counterSymbol().equals("0"))
-					return false; //TODO: stop violating the indentation rule
+				return (!counter.counterSymbol().equals("0")); //TODO: trollolol. 
 			}
 		}
 		return true;
